@@ -2,22 +2,12 @@
 // ===========================================================
 var express = require("express");
 var path = require("path");
-var cors = require('cors');
+// var cors = require('cors');
 
 // Sets up the Express App
 // =============================================================
 var app = express();
-var PORT = process.env.PORT || 8080;
-
-app.use(cors());
-
-app.get('/hello/:id', function (req, res, next) {
-  res.json({msg: 'Hello world, we are CORS-enabled!'});
-});
-
-app.listen(80, function () {
-  console.log('CORS-enabled web server is listening on port 80');
-});
+var PORT = process.env.PORT || 3000;
 
 // Data
 // ===========================================================
