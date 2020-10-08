@@ -1,2 +1,1 @@
-# note-taker
 # noteTakers
