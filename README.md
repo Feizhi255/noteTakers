@@ -8,8 +8,8 @@ For users that need to keep track of a lot of information, it's easy to forget o
 ![Example of application](./assets/gif/noteTakers.gif)
 
 ### Example of Finished work
-![Example of how it might look](./assests/image/noteTakers-home.png)
-![Example of how it might look](./assests/image/noteTakers-notes.png)
+![Example of how it might look](./assets/image/noteTakers-home.png)
+![Example of how it might look](./assets/image/noteTakers-notes.png)
 
 ## Table of contents
 - [Description](#Description)
