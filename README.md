@@ -37,7 +37,7 @@ Just me Jordan Kirby
 ## Test
 jest was used
 ## Repository
-- [Note Takers](https://github.com/Feizhi255/noteTakers)
+- [Note Takers heroku link](https://serene-earth-31624.herokuapp.com/)
 ## GitHub
 ![Image of me](https://avatars2.githubusercontent.com/u/64999600?v=4)
 - Jordan Kirby
