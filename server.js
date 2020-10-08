@@ -1,58 +1,23 @@
-// Dependencies
-// ===========================================================
-var express = require("express");
-var path = require("path");
-// var cors = require('cors');
+// add required modules
+const express = require("express");
+const path = require("path");
 
-// Sets up the Express App
-// =============================================================
-var app = express();
-var PORT = process.env.PORT || 3000;
+// Create server application at port 3000
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-// Data
-// ===========================================================
-// var yoda = {
-//   name: "Yoda",
-//   role: "Jedi Master",
-//   age: 900,
-//   forcePoints: 2000
-// };
+// Read URL or JSON
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
 
-// var darthmaul = {
-//   name: "Darth Maul",
-//   role: "Sith Lord",
-//   age: 200,
-//   forcePoints: 1200
-// };
+// Include js files
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
 
-// Create one more data entry for the character Obi Wan Kenobi.
-// Enter any values you like for the parameters following the same format as the Yoda and Darth Maul character
-//
+// Use public folder
+app.use(express.static("public"));
 
-// YOUR CODE GOES HERE
-
-//
-
-// Routes
-// ===========================================================
-app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "public/index.html"));
-});
-
-app.get("/notes", function (req, res) {
-  res.sendFile(path.join(__dirname, "public/notes.html"));
-});
-
-// Create a new Express route that leads users to the new Obi Wan Kenobi Data
-// Follow the same format as the Yoda and Darth Maul routes
-//
-
-// YOUR CODE GOES HERE
-//
-//
-
-// Listener
-// ===========================================================
-app.listen(PORT, function () {
-  console.log("App listening on PORT " + PORT);
+// Add listener
+app.listen(PORT, function() {
+    console.log("App listening on PORT: " + PORT);
 });
